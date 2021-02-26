@@ -5,11 +5,11 @@ Study the code below and explain in your own words why nested function can acces
 const external = "I'm outside the function";
 
 function myFunction() {
-  console.log(external);
+  // console.log(external);
   const internal = "Hello! I'm inside myFunction!";
 
   function nestedFunction() {
-    console.log(internal);
+    // console.log(internal);
   }
   nestedFunction();
 }
@@ -17,6 +17,7 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
+// A: It's a rule of JavaScript, that nested functions are able to access the scope above them.
 
 
 
@@ -28,9 +29,12 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
+function summation(number) {
+  var total = 0;
+    for(var i = 0; i <= number; i++){
+      total += i;
+    }
+  return total;
   }
  
 
