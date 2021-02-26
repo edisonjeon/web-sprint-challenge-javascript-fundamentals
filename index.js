@@ -60,14 +60,11 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(array){
-    const displayNames = [];
-    array.forEach(function() {
-      if(zooAnimals) {
-        displayNames.push(animal_name, scientific_name)
-      }
-    });
-    return displayNames;
+  function animalNames(){
+  //   const displayNames = [];
+  //  zooAnimals.forEach(function(item) {
+  //    displayNames({item.animal_name}, {item.scientific_name}) 
+  //  } 
   }
   
 
@@ -111,28 +108,30 @@ const zooAnimals = [
     * The consume function should return the invocation of cb, passing a and b into cb as arguments
   */
 
-  function consume(/*Your Code Here */){
-    /*Your Code Here */
+  function consume(a, b, cb){
+    return cb(a, b);
   }
  
   
   /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
  // 🦁🦁🦁 Use add to return the sum of two numbers 🦁🦁🦁
   
-function add(/*Your Code Here */){
-    /*Your Code Here*/
+function add(a, b){
+    return a + b;
   }
+ 
 
 // 🦁🦁🦁 Use multiply to return the product of two numbers 🦁🦁🦁
   
-function multiply(/*Your Code Here */){
-   /*Your Code Here */
+function multiply(a, b){
+   return a * b;
   }
+ 
 
  // 🦁🦁🦁 Use greeting to accept a first and last name and return "Hello {first-name} {last-name}, nice to meet you!" 🦁🦁🦁
   
-function greeting(/*Your Code Here */){
-   return /*Your Code Here */
+function greeting(a, b){
+   return `Hello ${a} ${b}, nice to meet you!`
   }
   
   // 🦁🦁🦁 Step 3: Check your work by un-commenting the following calls to consume(): 🦁🦁🦁 
@@ -153,9 +152,12 @@ function greeting(/*Your Code Here */){
 /* 🐴🐴🐴 Step 1: Base Constructor 🐴🐴🐴
  Use the constructor function named CuboidMaker to accept properties for length, width, and height which can be initialized as an object
 */
-function CuboidMaker(/*Your Code Here */){
-  /*Your Code Here */
+function CuboidMaker(properties){
+  this.length = properties.length;
+  this.width = properties.width;
+  this.height = properties.height;
 }
+
 
 
 /* 🐴🐴🐴 Step 2: Volume Method 🐴🐴🐴
