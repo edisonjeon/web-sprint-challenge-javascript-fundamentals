@@ -60,8 +60,14 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function animalNames(array){
+    const displayNames = [];
+    array.forEach(function() {
+      if(zooAnimals) {
+        displayNames.push(animal_name, scientific_name)
+      }
+    });
+    return displayNames;
   }
   
 
