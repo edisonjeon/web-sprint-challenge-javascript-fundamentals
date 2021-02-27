@@ -60,14 +60,14 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(){
-    const displayNames = [];
-    for(i = 0; i < zooAnimals.length; i++) {
-      return `name: ${zooAnimals.animal_name}, scientific: ${zooAnimals.scientific_name}`
-    }
-    return displayNames;
-  }
-  
+ function animalNames() {
+  const displayNames = [];
+  zooAnimals.forEach(function(animalObject){
+    displayNames.push(`name: ${animalObject.animal_name}, scientific: ${animalObject.scientific_name}`)
+ }) 
+  return displayNames;
+}
+console.log(animalNames())
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
